@@ -31,3 +31,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Maven artifacts
+pom.xml
+target/
+
+# Eclipse artifacts, including WTP generated manifests
+bin
+.classpath
+.project
+.settings
+.springBeans
+spring-*/src/main/java/META-INF/MANIFEST.MF
