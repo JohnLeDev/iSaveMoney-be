@@ -1,0 +1,1 @@
+docker run --name i_save_money -e POSTGRES_PASSWORD=isavemoney -p 5433:5433 -d postgres
