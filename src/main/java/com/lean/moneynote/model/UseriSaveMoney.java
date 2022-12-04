@@ -1,7 +1,6 @@
 package com.lean.moneynote.model;
 
 import java.util.Date;
-import java.util.UUID;
 
 import com.lean.moneynote.common.model.BaseModel;
 
