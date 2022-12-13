@@ -6,13 +6,15 @@ import com.lean.moneynote.common.model.BaseModel;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
-
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="user_isavemoney")
 public class UseriSaveMoney extends BaseModel {
-	
-	
+
 	private String username;
 	private String password;
 	private Date dob;
@@ -69,7 +71,5 @@ public class UseriSaveMoney extends BaseModel {
 	public void setIsStatus(Boolean isStatus) {
 		this.isStatus = isStatus;
 	}
-	
-	
-	
+
 }

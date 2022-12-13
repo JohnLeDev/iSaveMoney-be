@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegisterController {
 	
 	@GetMapping()
-	public boolean registerUser() {
-		return true;
+	public String registerUser() {
+		return "Hello";
 	}
 	
 }
