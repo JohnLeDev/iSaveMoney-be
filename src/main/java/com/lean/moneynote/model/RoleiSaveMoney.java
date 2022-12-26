@@ -8,8 +8,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Table(name="role_isavemoney")
+
 @Entity
+@Table(name="role_isavemoney")
 public class RoleiSaveMoney extends BaseModel {
 	
 	private String role;
@@ -21,7 +22,7 @@ public class RoleiSaveMoney extends BaseModel {
 	public void setRole(String role) {
 		this.role = role;
 	}
-	@OneToMany(mappedBy = "role_isavemoney")
+	@OneToMany(mappedBy = "roleiSaveMoney")
 	Set<RoleUseriSaveMoney> roleUser;
 	
 	

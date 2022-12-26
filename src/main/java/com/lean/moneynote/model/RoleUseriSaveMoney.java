@@ -11,7 +11,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table
+@Table(name="user_role_isavemoney")
 public class RoleUseriSaveMoney {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
