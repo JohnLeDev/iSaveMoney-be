@@ -43,7 +43,4 @@ public class BaseModel {
 		this.lastModified = lastModified;
 	}
 	
-	
-	
-	
 }

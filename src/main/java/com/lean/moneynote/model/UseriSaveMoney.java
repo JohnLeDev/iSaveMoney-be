@@ -1,18 +1,26 @@
 package com.lean.moneynote.model;
 
+import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import com.lean.moneynote.common.model.BaseModel;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
-
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="user_isavemoney")
-public class UseriSaveMoney extends BaseModel {
-	
-	
+public class UseriSaveMoney extends BaseModel implements UserDetails {
+
 	private String username;
 	private String password;
 	private Date dob;
@@ -70,6 +78,37 @@ public class UseriSaveMoney extends BaseModel {
 		this.isStatus = isStatus;
 	}
 	
-	
-	
+	@OneToMany(mappedBy = "useriSaveMoney")
+	Set<RoleUseriSaveMoney> roleUser;
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
 }
